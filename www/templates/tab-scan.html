@@ -1,0 +1,19 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding" ng-controller="ScanCtrl">
+    <div class="list card">
+      <div class="item item-divider">Your Medicines</div>
+      <div class="item item-body">
+        <div>
+            <button class="button" ng-click="scanBarcode()">Scan a medicine barcode</button>
+        </div>
+        <ion-list>
+          <ion-item ng-repeat="pack in packs">
+            <h2>{{pack.name}}</h2>
+            <p>{{pack.id}}</p>
+            <img ng-src="{{pack.image}}">
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
